@@ -1,13 +1,605 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.home {
+    /* background-image: url("/my-react-app/public/background-home-desktop.jpg"); */
+}
+.active{
+    border-bottom: 2px solid white;
+}
+.hidden{
+    display: none
+    !important;
+}
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 1.8rem;
+    position: absolute;
+    z-index: 1;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.home-nav {
+    display: flex;
+    position: absolute;
+    /* width: 52%; */
+    /* height: 90%; */
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+    backdrop-filter: blur(6.3px);
+    left: 700px;
+    /* padding: 1.5rem; */
 }
+
+.home-nav ul {
+    list-style: none;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    font-family: "Barlow Condensed", sans-serif;
+    margin: 0;
+}
+
+.li {
+    padding: 1.5rem;
+
+}
+
+li:hover {
+
+    border-bottom: .2rem solid white;
+}
+
+.line {
+    flex-grow: 1;
+    width: 205%;
+    border-bottom: 0.1px solid hsl(231 77% 90%);
+    position: absolute;
+    left: 500px;
+    z-index: 2;
+
+}
+
+.links ,.tabs__button{
+    font-family: var(--ff-sans-cond);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline;
+    letter-spacing: 2.7px;
+    padding: 1rem;
+}
+
+.links span {
+    font-weight: 700;
+    display: flex;
+}
+
+/* main content */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    /* padding: 3rem;
+    padding-left: 10rem; */
+    color: white;
+    align-items: end;
+    padding: 15% 5% 5% 5%;
+}
+
+.main h1 {
+    text-transform: uppercase;
+    font-family: "Barlow Condensed", sans-serif;
+    color: hsl(231 77% 90%);
+}
+
+.main span {
+    text-transform: uppercase;
+    font-family: "Bellefair", serif;
+    letter-spacing: 2.7px;
+    font-size: 120px;
+}
+
+.main p {
+    max-width: 60ch;
+    font-family: "Barlow", sans-serif;
+    line-height: 1.8;
+    color: hsl(231 77% 90%);
+}
+
+.explore {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    place-items: center;
+    font-size: 2rem;
+    position: relative;
+    display: inline-grid;
+    aspect-ratio: 1;
+    padding: 3rem;
+    text-transform: uppercase;
+}
+
+.explore-circle {
+    display: flex;
+    justify-content: center;
+}
+
+/* destination */
+.destination {
+    /* background: url(/space-tourism-website-main/starter-code/assets/destination/background-destination-desktop.jpg); */
+}
+
+.destination-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+}
+
+.destination_img{
+    grid-column: 1/2;
+    grid-row: auto;
+    margin: 0 auto;
+}
+
+.destination_links ul {
+    list-style: none;
+    color: white;
+    display: flex;
+    gap: 2rem;
+    font-family: "Barlow Condensed", sans-serif;
+    margin: 0;
+    padding-left: 0;
+}
+.destination_links li
+{
+    padding: 0;    
+}
+.tabs{
+    font-family: var(--ff-sans-cond);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline;
+    letter-spacing: 2.7px;
+}
+.planet-names {
+    text-transform: uppercase;
+    font-family: "Bellefair", serif;
+    letter-spacing: 2.7px;
+    font-size: 85px;
+}
+.planet-description {
+    max-width: 60ch;
+    font-family: "Barlow", sans-serif;
+    line-height: 1.8;
+    color: hsl(231 77% 90%);
+}
+.destination_stats
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 2px solid #383B4B;
+    width: 75%;
+}
+.destination_texts h3{
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+}
+.destination_texts p{
+    font-family: "Bellefair", serif;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+.destination-main span{
+    font-family: "Barlow Condensed", sans-serif;
+    color: #383B4B;
+}
+.common-text
+{
+    font-size: 1.5rem;
+    margin: 0 0 2em 5em;
+    letter-spacing: 0.23em;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 150;
+    text-transform: uppercase;    
+}
+
+
+/* crew page */
+.crew
+{
+    /* background: url(/space-tourism-website-main/starter-code/assets/crew/background-crew-desktop.jpg); */
+}
+.crew-main
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: flex-start;
+    padding-bottom: 0px;
+    padding-top: 12%;
+}
+.crew-image
+{
+    display: flex;
+    overflow: hidden;
+    height: 75vh;
+    width: 70vh;
+ 
+    grid-row: auto;
+    margin: 0 auto;
+   
+    
+}
+.crew-image img
+{
+    /* width: 50%; */
+}
+.crew-main span{
+    font-family: "Barlow Condensed", sans-serif;
+    color: #383B4B;
+}
+.crew-name,.crew-position
+{
+    text-transform: uppercase;
+    font-family: "Bellefair", serif;
+    letter-spacing: 1.5px;
+    font-size: 60px;
+}
+.crew-position
+{
+    font-size: 30px;
+    color: #787a84;
+}
+.crew-text p{
+    max-width: 60ch;
+    font-family: "Barlow", sans-serif;
+    line-height: 1.8;
+    color: hsl(231 77% 90%);
+}
+.container
+{
+    display: flex;
+    gap: 3%;
+
+}
+.dots
+{
+    border-radius: 50%;
+    height: 0.7em;
+    width: 0.7em;
+    cursor: pointer;
+    background-color: hsla(0,2%,51.2%,.733);
+    transition: background-color .6s ease;
+}
+.dots_active
+{
+    background-color: white;
+}
+.crew-common-text
+{
+    font-size: 1.5rem;
+    
+    letter-spacing: 0.23em;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 150;
+    text-transform: uppercase;    
+}
+
+/* destination */
+.tabs_image{
+    display: block;
+}
+.content_tabs
+{
+    display: none;
+}
+.active_content
+{
+    display: block;
+}
+.tabs_bloc
+{
+   display: flex;
+   gap: 2rem;
+   cursor: pointer; 
+   font-size: 20px;
+}
+
+/* crew */
+.crew_info
+{
+    display: none;
+}
+.active_content
+{
+    display: block;
+}
+
+.image 
+{
+    max-width: 500px;
+    /* max-height: 600px; */
+    max-width: inherit;
+    max-height: inherit;
+    height: inherit;
+    width: inherit;
+    display: none;   
+    
+    
+    
+}
+
+.active_image
+{
+    display: block;
+  
+}
+
+/* .crew_container
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} */
+
+/* technology */
+.num_slide
+{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+.num
+{
+    border: 1px solid white;
+    border-radius: 50%;
+   width: 50px;
+   height: 50px;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+.techno .common-text
+{
+    color: white;
+    padding: 15% 5% 5%; 
+    padding-bottom: 0;
+    margin: 0; 
+}
+.common-text span
+{
+    font-family: "Barlow Condensed", sans-serif;
+    color: #383B4B;
+}
+.tech_container
+{
+    padding: 3rem 5rem ;
+    color: white;
+    font-size: 20px;
+    display: flex;
+}
+.active_num
+{
+    background-color: white;
+    color: black;
+}
+.tech_image
+{
+    max-width: inherit;
+    max-height: inherit;
+    height: inherit;
+    width: inherit;
+    display: none;   
+}
+.active_image
+{
+    display: block;
+}
+.contents
+{
+    display: none;
+}
+.active_contents{
+    display: block;
+    padding-left: 8%;
+  
+}
+.content_wrapper
+{
+    display: flex;
+}
+.contents span{
+    text-transform: uppercase;
+    color: #b4b1b1;
+    font-family: "Barlow",sans-serif;
+}
+.contents h1
+{
+    text-transform: uppercase;
+    font-family: "Bellefair",serif;
+    font-weight: 400;
+    font-size: 3rem;
+}
+.contents p{
+    width: 80%;
+    color: #b4b1b1;
+    font-family: "Barlow",sans-serif;
+    line-height: 2;
+}
+.content_image
+{
+    display: flex;
+    overflow: hidden;
+    height: 50vh;
+    width: 100vh;
+}
+.home{
+    background-image: url("../../my-react-app/public/background-home-desktop.jpg");
+}
+.destination{
+    background-image: url("../../my-react-app/public/background-destination-desktop.jpg");
+}
+.crew{
+    background-image: url("../../my-react-app/public/background-crew-desktop.jpg");
+}
+.techno{
+    background-image: url("../../my-react-app/public/background-technology-desktop.jpg");
+}
+.crew-common-text{
+    max-width: 60ch;
+    font-family: "Barlow", sans-serif;
+    line-height: 1.8;
+    color: hsl(231 77% 90%);
+    padding-top: 20px;
+}
+.crew-common-text span{
+    font-family: "Barlow Condensed", sans-serif;
+    color: #383B4B;
+}
+.mobileNav
+{
+    display: none;
+}
+@media only screen and (min-width:425px) and (max-width:768px){
+    .line{
+      display: none;
+      border-bottom: 0px;
+    }
+    
+    .home-nav ul
+    {
+        gap: 1rem;
+    }
+    
+    .home main
+    {
+         grid-template-columns: repeat(1,1fr);
+    }
+    .main{
+      text-align: -webkit-center;
+    }
+    .home{
+        background-image: url('../../my-react-app/public/background-home-mobile.jpg');
+    }
+
+    /* destination */
+    .destination{
+        background-image: url("../../my-react-app/public/background-destination-mobile.jpg");
+    }
+    .destination-main{
+        grid-template-columns: auto;
+    }
+    .destination_text
+    {
+        text-align: -webkit-center;
+    }
+    .tabs_bloc{
+        width:65%;
+        margin: 0 auto;
+    }
+    /* crew */
+    .crew
+    {
+        background-image: url("../../my-react-app/public/background-crew-mobile.jpg");
+    }
+    .crew-main{
+        grid-template-columns: auto;
+        
+    }
+    .crew-image{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        height: 45vh;
+        width: 50vh;
+        margin-top: 20px;
+    }
+    /* technology */
+    .techno{
+        background-image: url("../../my-react-app/public/background-technology-mobile.jpg");
+    }
+    .tech_container{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .content_wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .num_slide{
+        flex-direction: row;
+        padding-top: 12px;
+    }
+    .contents 
+    {
+        text-align: center;
+        padding-top: 20px;
+
+    }
+    .contents p 
+    {
+        width: 100%;
+    }
+    
+
+    .home-nav ul{
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 40px;
+  
+        
+       }
+       
+       
+      
+       .home-nav{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 600px;
+        left: 0;
+       }
+       .hamburger{
+        position: absolute;
+        top: 23px;
+        right: 5%;
+        cursor:pointer;
+        z-index: 2;
+
+
+       }
+        .mobileNav
+        {
+         display: flex;
+         flex-direction: column;
+        }
+        .mobilenavbar
+        {
+            display: flex;
+            flex: 1;
+            position: absolute;
+            z-index: 1;
+            width: 50%;
+            right: 0;
+           
+        }
+        .navbar{
+            display: none;
+        }
+        .links
+        {
+            /* padding: 2rem; */
+            padding-right: 3rem;
+        }
+        
+}
+
